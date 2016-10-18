@@ -2,3 +2,6 @@ bin/
 *.gem
 Gemfile.lock
 ext/Makefile
+.ruby-version
+.ruby-gemset
+.DS_Store
