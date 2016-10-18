@@ -6,6 +6,8 @@ Fast and efficient recommendations and predictions using Ruby & Redis. Developed
 
 ![](https://codeship.com/projects/5aeeedf0-6053-0131-2319-5ede98f174ff/status?branch=master)
 
+[![Build Status](https://travis-ci.org/jkeam/predictor.svg?branch=master)](https://travis-ci.org/jkeam/predictor)
+
 Originally forked and based on [Recommendify](https://github.com/paulasmuth/recommendify) by Paul Asmuth, so a huge thanks to him for his contributions to Recommendify. Predictor has been almost completely rewritten to
 * Be much, much more performant and efficient by using Redis for most logic.
 * Provide item similarities such as "Users that read this book also read ..."
