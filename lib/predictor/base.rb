@@ -181,7 +181,7 @@ module Predictor::Base
   def similarities_for(item, with_scores: false, offset: 0, limit: -1, exclusion_set: [])
     neighbors = nil
     Predictor.redis.multi do |multi|
-      multi.zunionstore 'temp', [1, redis_key(:similarities, item)]
+      multi.zunionstore 'temp', [redis_key(:similarities, item)]
       multi.zrem 'temp', exclusion_set if exclusion_set.length > 0
       neighbors = multi.zrevrange('temp', offset, limit == -1 ? limit : offset + (limit - 1), with_scores: with_scores)
       multi.del 'temp'
